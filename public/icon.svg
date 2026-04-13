@@ -1,0 +1,39 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Default (Light Mode Tab): Bowl is Black, gold needs to be slightly brighter/thicker */
+    .bowl { fill: #1A1A1A; }
+    .crack-main { stroke: #FFE285; stroke-width: 24; }
+    .crack-l { stroke: #FFE285; stroke-width: 18; }
+    .crack-r { stroke: #FFE285; stroke-width: 16; }
+    
+    /* Dark Mode Tab: Bowl flips to White, gold returns to standard metallic */
+    @media (prefers-color-scheme: dark) {
+      .bowl { fill: #FAFAFA; }
+      .crack-main { stroke: #E2B14B; stroke-width: 20; }
+      .crack-l { stroke: #E2B14B; stroke-width: 14; }
+      .crack-r { stroke: #E2B14B; stroke-width: 12; }
+    }
+  </style>
+
+  <!-- Define the strict bowl boundaries -->
+  <defs>
+    <clipPath id="bowl-clip">
+      <path d="M 36 84 L 220 84 C 220 174, 182 216, 128 216 C 74 216, 36 174, 36 84 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Draw the bowl -->
+  <path class="bowl" d="M 36 84 L 220 84 C 220 174, 182 216, 128 216 C 74 216, 36 174, 36 84 Z" />
+
+  <!-- Draw the dynamically responding cracks -->
+  <g clip-path="url(#bowl-clip)">
+    <!-- Primary Sakura Fracture -->
+    <path class="crack-main" d="M 90 240 L 110 160 L 140 120 L 120 70" stroke-linejoin="bevel" stroke-linecap="round" fill="none" />
+    
+    <!-- Left Branch -->
+    <path class="crack-l" d="M 110 160 L 20 120" stroke-linejoin="bevel" stroke-linecap="round" fill="none" />
+    
+    <!-- Right Branch -->
+    <path class="crack-r" d="M 140 120 L 220 90" stroke-linejoin="bevel" stroke-linecap="round" fill="none" />
+  </g>
+</svg>
