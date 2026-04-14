@@ -45,9 +45,9 @@ export default function Page() {
 
       <section id="hero" className="min-h-[100dvh] flex flex-col justify-center items-center px-6 pt-32 pb-24 relative">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
           className="text-center max-w-4xl z-20"
         >
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-light tracking-tight leading-[0.9] mb-12">
