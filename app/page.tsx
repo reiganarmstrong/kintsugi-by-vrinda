@@ -37,8 +37,8 @@ export default function Page() {
         </div>
         <div className="relative w-full h-[12px] font-sans text-[8px] uppercase tracking-[0.2em] font-medium opacity-80 mt-1">
            <a href="#hero" onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); }} className="absolute left-0">Art</a>
-           <a href="#philosophy" onClick={(e) => { e.preventDefault(); document.getElementById('philosophy')?.scrollIntoView({ behavior: 'smooth' }); }} className="absolute left-[45%] -translate-x-1/2">Phil.</a>
-           <a href="#workshops" onClick={(e) => { e.preventDefault(); document.getElementById('workshops')?.scrollIntoView({ behavior: 'smooth' }); }} className="absolute left-[70%] -translate-x-1/2">Work.</a>
+           <a href="#philosophy" onClick={(e) => { e.preventDefault(); document.getElementById('philosophy')?.scrollIntoView({ behavior: 'smooth' }); }} className="absolute left-[28%] -translate-x-1/2">Phil.</a>
+           <a href="#workshops" onClick={(e) => { e.preventDefault(); document.getElementById('workshops')?.scrollIntoView({ behavior: 'smooth' }); }} className="absolute left-[50%] -translate-x-1/2">Work.</a>
            <a href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="absolute right-0">About</a>
         </div>
       </div>
@@ -115,16 +115,27 @@ export default function Page() {
       </section>
 
       <section id="about" className="pt-32 pb-48 lg:pb-32 px-6 md:px-24 max-w-5xl mx-auto">
+        {/* Mobile Title (above image) */}
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-light mb-8 md:hidden"
+        >
+          About Me
+        </motion.h2>
+
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative">
             <img src="/images/vrinda.jpg" alt="About Vrinda" className="w-full h-[60vh] object-cover shadow-xl" />
           </motion.div>
           <div className="flex flex-col gap-6 relative">
+            {/* Desktop Title (in column) */}
             <motion.h2
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-light mb-4"
+              className="hidden md:block text-4xl md:text-5xl font-light mb-4"
             >
               About Me
             </motion.h2>
