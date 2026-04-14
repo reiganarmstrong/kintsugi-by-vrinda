@@ -55,7 +55,11 @@ export default function Page() {
             <span className="italic text-[var(--sakura-pink)]">Embracing</span> <br />
             Imperfection
           </h1>
-          <img src="/images/kintsugi-1.png" alt="Pristine white kintsugi bowl" className="w-[80vw] md:w-[400px] h-auto shadow-xl mx-auto" />
+          <img
+            src="/images/kintsugi-hero.jpg"
+            alt="Kintsugi ceramic vessel with gold repair lines"
+            className="w-[80vw] md:w-[400px] h-[420px] object-cover object-center shadow-xl mx-auto"
+          />
         </motion.div>
         <div className="absolute bottom-0 w-full max-w-5xl mx-auto left-0 right-0 border-b border-black/10" />
       </section>
@@ -99,9 +103,14 @@ export default function Page() {
               Workshops Coming Soon
             </motion.button>
           </div>
-          <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
             <img src="/images/kintsugi-3.png" alt="Close up Kintsugi details" className="w-full h-[50vh] object-cover shadow-xl" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -111,7 +120,14 @@ export default function Page() {
             <img src="/images/vrinda.jpg" alt="About Vrinda" className="w-full h-[60vh] object-cover shadow-xl" />
           </motion.div>
           <div className="flex flex-col gap-6 relative">
-            <h2 className="text-4xl md:text-5xl font-light mb-4">About Me</h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-light mb-4"
+            >
+              About Me
+            </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               className="font-inter font-light text-lg md:text-xl leading-relaxed text-slate-700"
