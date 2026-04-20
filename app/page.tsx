@@ -8,8 +8,8 @@ export default function Page() {
   return (
     <div className="relative min-h-screen bg-[#eadbcc] font-serif text-[#1A1A1A] selection:bg-[var(--sakura-pink)] selection:text-white">
       <nav className="fixed top-0 z-40 flex w-full items-center justify-between border-b border-black/5 bg-[#eadbcc]/80 p-6 text-[#1A1A1A] shadow-sm backdrop-blur-xl transition-all duration-300 2xl:border-transparent 2xl:bg-transparent 2xl:shadow-none 2xl:backdrop-blur-none">
-        <span className="text-sm font-medium tracking-tighter uppercase">
-          Kintsugi / Vrinda
+        <span className="text-sm font-medium tracking-tighter uppercase [word-spacing:0.2rem]">
+          Kintsugi By Vrinda
         </span>
       </nav>
 
